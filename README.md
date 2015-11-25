@@ -1,6 +1,6 @@
 Analiza podatkov s programom R, 2015/16
 
-Avtor: AJure Cankar
+Avtor: Jure Cankar
 
 Repozitorij z gradivi pri predmetu APPR v študijskem letu 2015/16.
 Analiza razmerja učiteljev na učenca v Sloveniji in preostalih državah OECD-ja
