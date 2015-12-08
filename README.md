@@ -1,22 +1,26 @@
-Analiza podatkov s programom R, 2015/16
+#Analiza podatkov s programom R, 2015/16
 
-Avtor: Jure Cankar
+##Avtor: Jure Cankar
 
 Repozitorij z gradivi pri predmetu APPR v študijskem letu 2015/16.
-Analiza razmerja učiteljev na učenca v Sloveniji in preostalih državah OECD-ja
 
-Predstaviti želim povprečna števila dijakov in učiteljev v šolh v državah OECD-ja in razmerja dijakov na učitelja v povprečni učilnici. 
+##Analiza razmerja učiteljev na učenca v Sloveniji in preostalih državah OECD-ja
 
-Viri: 
-http://stats.oecd.org/# 
-http://www.stat.si/StatWeb/pregled-podrocja?idp=9&headerbar=7#tabPregled
+Predstaviti želim povprečna števila dijakov in učiteljev v šolh v državah OECD-ja in razmerja dijakov na učitelja v povprečni učilnici.
 
+##Viri:
+
+-http://stats.oecd.org/# 
+
+-http://www.stat.si/StatWeb/pregled-podrocja?idp=9&headerbar=7#tabPregled
+
+##Program
 
 Glavni program in poročilo se nahajata v datoteki projekt.Rmd. Ko ga prevedemo, se izvedejo programi, ki ustrezajo drugi, tretji in četrti fazi projekta:
 
-    obdelava, uvoz in čiščenje podatkov: uvoz/uvoz.r
-    analiza in vizualizacija podatkov: vizualizacija/vizualizacija.r
-    napredna analiza podatkov: analiza/analiza.r
+    -obdelava, uvoz in čiščenje podatkov: uvoz/uvoz.r
+    -analiza in vizualizacija podatkov: vizualizacija/vizualizacija.r
+    -napredna analiza podatkov: analiza/analiza.r
 
 Vnaprej pripravljene funkcije se nahajajo v datotekah v mapi lib/. Podatkovni viri so v mapi podatki/. Zemljevidi v obliki SHP, ki jih program pobere, se shranijo v mapo ../zemljevidi/ (torej izven mape projekta).
 Spletni vmesnik
