@@ -25,60 +25,13 @@ Analiziral bom povprečno število dijakov/študentov v posameznih stopnjah izob
 
 # Obdelava, uvoz in čiščenje podatkov
 
+source("uvoz/uvoz.r", encoding = "UTF-8")
 
 ```
+source("uvoz/uvoz.r", encoding = "UTF-8")
 
-Uvozili smo podatke o občinah v obliki CSV s statističnega urada ter v obliki HTML
-z Wikipedije. Poglejmo si začetka obeh uvoženih razpredelnic.
+Podatke sem črpal predvsem iz uradne internetne strani statističnega ureda OECD, saj sem tam pridobil vse, kar sem potreboval. Iz tam sem prekopiral 2 tabeli, ki sem jih kasneje preuredil tako, kot bom to potreboval za naslednjo stopnjo projekta. 
 
-```{r razpredelnice}
-kable(head(druzine))
-head(obcine)
-```
+Tabela Razmerje prikazuje koliko učencev uči povprečen učitelj v določeni državi. Za vsako državo OECD imamo 6 tipov podatkov. Najprej ločimo primarno stopnjo izobraževanja (kar je pri nas osnovna šola) in sekundarno stopnjo izobraževanja. Nato ločimo še učne inštitute na javne, zasebne in skupek obeh skupaj. 
 
-Slika \ref{fig:histogram} prikazuje porazdelitev števila naselij v občinah.
-
-```{r histogram, echo=FALSE, fig.align='center', fig.cap='Histogram števila naselij v občinah'}
-hist(obcine[,4], main = "Pogostost števila naselij",
-     xlab = "Število naselij", ylab = "Število občin")
-```
-
-***
-
-# Analiza in vizualizacija podatkov
-
-```{r vizualizacija, echo=FALSE}
-source("vizualizacija/vizualizacija.r", encoding = "UTF-8")
-```
-
-Slika \ref{fig:zemljevid} prikazuje povprečno velikost družine za vsako občino.
-
-```{r zemljevid, echo=FALSE, fig.align='center', fig.cap='Zemljevid povprečnega števila otrok v družini'}
-n <- 100
-barve <- topo.colors(n)[1+(n-1)*(druzine$povprecje-min.povprecje)/(max.povprecje-min.povprecje)]
-plot(zemljevid, col = barve)
-title("Povprečno število otrok v družini")
-```
-
-***
-
-# Napredna analiza podatkov
-
-```{r analiza, echo=FALSE}
-source("analiza/analiza.r", encoding = "UTF-8")
-```
-
-Slika \ref{fig:graf} prikazuje povezavo med številom naselij in površino občine.
-
-```{r graf, echo=FALSE, fig.align='center', fig.cap='Povezava med številom naselij in površino občine'}
-plot(obcine[[1]], obcine[[4]],
-     main = "Število naselij glede na površino občine",
-     xlab = expression("Površina (km"^2 * ")"),
-     ylab = "Št. naselij",
-     col = barve[obcine[[7]]],
-     pch = 18)
-legend("topright", legend = names(barve), col = barve,
-       pch = 18, cex = 0.5, bg = "white")
-```
-
-***
+Tabela povprecen_razred pa prikazuje povprečno število učencev v razredu v posameznih državah. Tako kot v prejšnji tabeli sem tudi tukaj ločil podatke na primarno in sekundrano stošpnjo izobraževanja ter na javne, zasebne ali skupek obeh. 
