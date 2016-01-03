@@ -19,14 +19,13 @@ source("lib/libraries.r", encoding = "UTF-8")
 
 # Izbira teme
 
-Za vzorec bomo prikazali nekaj podatkov o slovenskih občinah.
+Analiziral bom povprečno število dijakov/študentov v posameznih stopnjah izobrazbe in razmerje učencev na učitelja v državah OECD. Skušal bom odkriti kje so razmere za učenje najslabše glede na neenakomerno številčo učencev. 
 
 ***
 
 # Obdelava, uvoz in čiščenje podatkov
 
-```{r uvoz, echo=FALSE}
-source("uvoz/uvoz.r", encoding = "UTF-8")
+
 ```
 
 Uvozili smo podatke o občinah v obliki CSV s statističnega urada ter v obliki HTML
