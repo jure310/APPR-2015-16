@@ -56,3 +56,24 @@ kable(povprecje)
 Tabela povprecje pa prikazuje povprečno število učencev v razredu v posameznih državah.
 Tako kot v prejšnji tabeli sem tudi tukaj ločil podatke
 na primarno in sekundrano stopnjo izobraževanja ter na javne, zasebne ali skupek obeh. 
+
+```
+ggplot(data=razmerje, aes(x=Drzava, y=`Primarna stopnja izobrazbe`)) + geom_point(colour="black", size=5)
+```
+Da si podatke lažje predstavljamo sem jih predstavil na večih grafih. Prvi prikazuje 
+povprečno število dijakov na profesorja v primarni stopnji izobraževanja.
+
+```
+ggplot(data=razmerje, aes(x=Drzava, y=`Sekundarna stopnja izobrazbe`)) + geom_point(colour="blue", size=5, shape=21)
+```
+Tu sem prikazal iste podatke kot v prejšnji tabeli, le da sem tu gledal sekundarno stopnjo izobrazbe.
+
+```
+ggplot(data=povprecje, aes(x=Drzava, y=`Primarna stopnja izobrazbe`)) + geom_point(colour="blue", size=5)
+```
+Nato sem narisal še graf, ki prikazuje povprečno število dijakov v razredu primarne stopnje izobraževanja.
+
+```
+ggplot(data=povprecje, aes(x=Drzava, y=`Sekundarna stopnja izobrazbe`)) + geom_point(colour="green", size=5)
+```
+Nazadnje pa sem narisal še graf, ki prikazuje povprečno število dijakov v razredu sekundarne stopnje izobraževanja. 
