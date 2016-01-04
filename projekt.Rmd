@@ -29,11 +29,9 @@ znotraj razreda najslabše glede na te podatke.
 
 # Obdelava, uvoz in čiščenje podatkov
 
-source("uvoz/uvoz.r", encoding = "UTF-8")
-
 ```
 source("uvoz/uvoz.r", encoding = "UTF-8")
-
+```
 Podatke sem črpal predvsem iz uradne internetne strani 
 statističnega ureda OECD, saj sem tam pridobil vse, 
 kar sem potreboval. 
