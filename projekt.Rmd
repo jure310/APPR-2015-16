@@ -39,12 +39,20 @@ Iz tam sem prekopiral 2 tabeli, ki sem jih
 kasneje preuredil tako, 
 kot bom to potreboval za naslednjo stopnjo projekta. 
 
-Tabela Razmerje prikazuje koliko učencev uči povprečen učitelj v določeni državi. 
+```
+kable(razmerje)
+```
+
+Tabela razmerje prikazuje koliko učencev uči povprečen učitelj v določeni državi. 
 Za vsako državo OECD imamo 6 tipov podatkov. 
 Najprej ločimo primarno stopnjo izobraževanja (kar je pri nas osnovna šola) 
 in sekundarno stopnjo izobraževanja. 
 Nato ločimo še učne inštitute na javne, zasebne in skupek obeh skupaj. 
 
-Tabela povprecen_razred pa prikazuje povprečno število učencev v razredu v posameznih državah.
+```
+kable(povprecje)
+```
+
+Tabela povprecje pa prikazuje povprečno število učencev v razredu v posameznih državah.
 Tako kot v prejšnji tabeli sem tudi tukaj ločil podatke
 na primarno in sekundrano stopnjo izobraževanja ter na javne, zasebne ali skupek obeh. 
